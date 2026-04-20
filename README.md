@@ -71,6 +71,8 @@ This set of steps describes how to install Android Studio with NDK support in Li
 ```
 sudo apt install openjdk-17-jdk-headless adb
 ```
+(openjdk-25-jdk-headless works as well)
+
 2) Download Android Studio: https://developer.android.com/studio
 3) Start 'studio.sh' in android-studio/bin
 4) Let it install the SDK.
@@ -126,15 +128,16 @@ In order to push the APK to your phone, you need `adb` installed in Windows as w
 ```
 sudo apt install openjdk-17-jdk-headless adb unzip zip
 ```
-2. Download "Command line tools only": https://developer.android.com/studio#downloads - you can get a URL and use `wget` in WSL to download the tools by clicking on the **"Linux"** toolset, then right-clicking on the accept link and saying copy link to location.  Then you can say `wget <link>` in WSL.
-3. Create a folder for the Android SDK and export it. You may want to add that export to your `~/.bashrc`:
+(openjdk-25-jdk-headless works as well)
+3. Download "Command line tools only": https://developer.android.com/studio#downloads - you can get a URL and use `wget` in WSL to download the tools by clicking on the **"Linux"** toolset, then right-clicking on the accept link and saying copy link to location.  Then you can say `wget <link>` in WSL.
+4. Create a folder for the Android SDK and export it. You may want to add that export to your `~/.bashrc`:
 ```
 mkdir ~/android-sdk
 export ANDROID_HOME=~/android-sdk
 printf "\nexport ANDROID_HOME=~/android-sdk\n" >> ~/.bashrc
 ```
-4. Unzip the "Command line tools only" file so that `tools` is in your brand new `android-sdk` folder.
-5. Install the SDK and NDK components:
+5. Unzip the "Command line tools only" file so that `tools` is in your brand new `android-sdk` folder.
+6. Install the SDK and NDK components:
 
 For earler versions of tools see note for pre-SDK-32-Tools.
 
